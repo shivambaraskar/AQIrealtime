@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>aqirt.com</title>
+        <link rel="icon" type="image/png" href="icon/AQIrt-favicon.png"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <header>
+        <div class="nav-elements" id="name"><h1>AQI<sub>realtime</sub></h1></div>
+        <div class="nav-elements" id="menu"></div>
+        <div class="nav-elements" id="setting"><img src="icon/setting.png" alt="setting"></div>
+        <input class="nav-elements" id="location" type="text" placeholder="location">
+    </header>
+    <div id="nav-menu">
+        <ul><hr>
+            <li><a href="news.html"><pre>    Weather/AQI News    </pre></a></li><hr>
+            <li><a href="theme.html"><pre>    Dark Theme    </pre></a></li><hr>
+            <li><a href="about.html"><pre>    About Us    </pre></a></li><hr>
+            <li><a href="contact.html"><pre>    Contact Us    </pre></a></li><hr><br>
+            <li><h3>AQI<sub>realtime</sub></h3></li>
+        </ul>
+    </div>
+    <div id="weatherbox">
+        <div id="dayinfo"><img id ="info-img" src="icon/weather_summer_icon.png"alt="dayinfo"><label id="d_info_lab" class="lab">Weather Status</label></div>
+        <div id="adjust">
+            <div class="weat_info" id="temp"><img src="icon/temprature.png" alt="temprature"><label id="templab" class="lab">Temprature</label></div>
+            <div class="weat_info" id="humidity"><img src="icon/humidity.png" alt="humidity"><label id="humiditylab" class="lab">Humidity</label></div>
+            <div class="weat_info" id="pressure"><img src="icon/pressure.png" alt="pressure"><label id="presslab" class="lab">Atm. Pressure</label></div>
+            <div class="weat_info" id="wind"><img src="icon/windspeed.png" alt="wind speed"><label id="windlab" class="lab">Wind Speed</label></div>
+            <div id="loc_info">
+                <div id="loc"><img src="icon/location.png" alt="location"><label id="loclab" class="lab">Location</label></div>
+                <div id="detailed"><label class="lab">Detailed Weather</label><a href="http://www.msn.com/en-in/weather"><img src="icon/arrow.png" alt="arrow"></a></div>
+            </div>
+        </div>
+    </div>
+    <div id="aqibox">
+        <div id="AQIinfo"><div id="AQI-num">00</div><label class="lab"><img src="icon/plantIcon.png" alt="plantImg"><p>AQI</p></label></div>
+        <div id="adjust2">
+            <div id="AQImsg"><div id="severity">Severity</div><div id="msgbox">Health Advice will be displayed here</div></div>
+            <div id="AQIscale">
+                <div class="AQIcolor" id="a1">0-50</div>
+                <div class="AQIcolor" id="a2">51-100</div>
+                <div class="AQIcolor" id="a3">101-200</div>
+                <div class="AQIcolor" id="a4">201-300</div>
+                <div class="AQIcolor" id="a5">301-400</div>
+                <div class="AQIcolor" id="a6">401-500</div>
+                <div id="indic"><img id="indicImg" src="icon/indicator.png" alt="indicator"></div>
+            </div>
+        </div>
+    </div>
+    <div id="gas-details">
+        <div class="nameDiv" id="gas-rt-div" onclick="togg(`gas-rt-div`,`gas-rt`,`compositionGas`)"> RealTime AQI </div>
+        <div class="nameDiv" id="gas-det-div" onclick="togg(`gas-det-div`,`gas-det`,`gasTable`)"> Pollutants Details </div>
+        <div class="nameDiv" id="ml-predict-div" onclick="togg(`ml-predict-div`,`ml-predict`,`AQI_Predict`)"> AQI (24-Hrs) </div>
+        <div id="gas-rt">
+            <canvas class="graphCanvas" id="compositionGas"></canvas>
+        </div>
+        <div id="gas-det">
+            <table class="graphCanvas" id="gasTable"></table>
+        </div>
+        <div id="ml-predict">
+            <canvas class="graphCanvas" id="AQI_Predict"></canvas>
+        </div>
+    </div>
+    <div id="sep"></div>
+    <footer>
+        <h3>AQI<sub>realtime</sub></h3>
+        <div id="mailbox"><a href="mailto: me.shivambaraskar@gmail.com">Write a Mail to Us</a></div>
+        <div class="foot-contact"><a href="https://github.com/shivambaraskar"><img src="icon/github.png" alt="github"></a></div>
+        <div class="foot-contact"><a href="aqirt.org/contact/linkedin"><img src="icon/linkedin.png" alt="linkedin"></a></div>
+        <div class="foot-contact"><a href="aqirt.org/contact/facebook"><img src="icon/facebook.png" alt="facebook"></a></div>
+        <div class="foot-contact"><a href="aqirt.org/contact/instagram"><img src="icon/instagram.png" alt="instagram"></a></div>
+        <div class="foot-contact"><a href="aqirt.org/contact/twitter"><img src="icon/twitter.png" alt="twitter"></a></div>
+        <p>aqirt.org, inc</p>
+        <a href="PrivacyPolicy">Privacy Policy</a>
+        <a href="terms&conditions">Terms of Use</a>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="Weather&AQIdata\weather&AQI.js"></script>
+    </body>
+</html>
