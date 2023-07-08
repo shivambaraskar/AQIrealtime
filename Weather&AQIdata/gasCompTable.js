@@ -12,8 +12,7 @@ export default function updateTable(gasData, weathData){
         arr[0]=Math.abs(Math.random(gasCon)*(max - min) + min).toFixed(2);
         arr[1]=Math.abs(Math.random(gasCon)*(max - min) + min).toFixed(2);
         arr[2]=Math.abs(Math.random(gasCon)*(max - min) + min).toFixed(2);
-        arr = arr.sort();
-        console.log(arr);
+        arr = arr.sort(function(a,b) { return a - b;});
         data.min=arr[0];
         data.avg=arr[1];
         data.max=arr[2];
